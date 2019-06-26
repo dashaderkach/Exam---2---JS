@@ -1,0 +1,33 @@
+*{
+	box-sizing: border-box;
+}
+.content{
+  padding: 0;
+}
+.ba-grid-container{
+	width: 100%;
+	margin: 20px auto;
+	padding: 0 20px;
+}
+
+.ba-grid-img{
+	border-style: none;
+	display: block;
+	width: 100%;
+}
+.ba-grid{
+  overflow: auto;
+  margin-left: -10px;
+}
+.ba-grid > [class*="ba-width-"]{
+  float: left;
+  padding-left: 10px;
+  
+}
+.ba-grid + .ba-grid {
+    margin-top: 10px;
+}
+
+.ba-width-1-2{
+    width: 48%;
+}
