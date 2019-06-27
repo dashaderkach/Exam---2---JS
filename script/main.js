@@ -205,13 +205,30 @@ function initMap() {
 
         });
 
-        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        
         var marker = new google.maps.Marker({
         	position: position,
         	map: map,
-        	icon: image
+        	icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              scale: 16,
+              fillColor: "#7e5aff",
+              fillOpacity: 0.5,
+              strokeWeight: 0.9,
+              strokeColor: "#7e5aff",
+              center: position
+            }, 
+
         });
         
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
-      }
+      };
+
+;var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
