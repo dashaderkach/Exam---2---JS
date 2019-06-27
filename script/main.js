@@ -209,18 +209,27 @@ function initMap() {
         var marker = new google.maps.Marker({
         	position: position,
         	map: map,
-        	icon: {
-              path: google.maps.SymbolPath.CIRCLE,
-              scale: 16,
-              fillColor: "#7e5aff",
-              fillOpacity: 0.5,
-              strokeWeight: 0.9,
-              strokeColor: "#7e5aff",
-              center: position
-            }, 
+          draggable: true,
+          // animation: google.maps.Animation.BOUNCE,
+          icon: 'imgs/point.png',
+        	// icon: {
+         //      // path: google.maps.SymbolPath.CIRCLE,
+         //      // scale: 16,
+         //      // fillColor: "#7e5aff",
+         //      // fillOpacity: 0.5,
+         //      // strokeWeight: 0.9,
+         //      // strokeColor: "#7e5aff",
+         //      // center: position
+         //    }, 
+
 
         });
-        
+
+        var popupContent = '<p class="content">Here we are</p>',
+              infowindow = new google.maps.InfoWindow({
+            content: popupContent
+        });
+    
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
       };
