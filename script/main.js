@@ -210,19 +210,7 @@ function initMap() {
         	position: position,
         	map: map,
           draggable: true,
-          // animation: google.maps.Animation.BOUNCE,
-          icon: 'imgs/point.png',
-        	// icon: {
-         //      // path: google.maps.SymbolPath.CIRCLE,
-         //      // scale: 16,
-         //      // fillColor: "#7e5aff",
-         //      // fillOpacity: 0.5,
-         //      // strokeWeight: 0.9,
-         //      // strokeColor: "#7e5aff",
-         //      // center: position
-         //    }, 
-
-
+          icon: 'imgs/point.png'
         });
 
         var popupContent = '<p class="content">Here we are</p>',
